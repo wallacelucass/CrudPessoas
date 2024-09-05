@@ -74,14 +74,15 @@ Aplicação em Java com Microsoft SQL Server para o cadastro, leitura, edição 
 - **Parâmetros**:
     - `email`: Email da pessoa a ser buscada.
 
-### Atualizar Pessoa
-- **URL**: `/pessoas`
+### Atualizar Pessoa por Nome
+- **URL**: `/pessoas/atualizar/{nome}`
 - **Método**: `PUT`
-- **Descrição**: Atualiza as informações de uma pessoa.
+- **Descrição**: Atualiza as informações de uma pessoa pelo nome.
+- **Parâmetros**:
+    - `nome`: Nome da pessoa a ser atualizada.
 - **Corpo da Requisição**:
     ```json
     {
-        "id": "long",
         "nome": "string",
         "email": "string"
     }
