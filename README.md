@@ -61,14 +61,14 @@ Aplicação em Java com Microsoft SQL Server para o cadastro, leitura, edição 
 - **Descrição**: Lista todas as pessoas cadastradas.
 
 ### Buscar Pessoa por Nome
-- **URL**: `/pessoas/nome/{nome}`
+- **URL**: `/pessoas/buscar/{nome}`
 - **Método**: `GET`
 - **Descrição**: Busca uma pessoa pelo nome.
 - **Parâmetros**:
     - `nome`: Nome da pessoa a ser buscada.
 
 ### Buscar Pessoa por Email
-- **URL**: `/pessoas/email/{email}`
+- **URL**: `/pessoas/buscar/?email={email}`
 - **Método**: `GET`
 - **Descrição**: Busca uma pessoa pelo email.
 - **Parâmetros**:
