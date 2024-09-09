@@ -12,7 +12,7 @@ public class PessoaService {
 
     @Autowired
     private PessoaRepository pessoaRepository;
-    // Validador email
+    // Criar pessoa com validador de email
     public Pessoa criarPessoa(Pessoa pessoa) {
         if (!emailValido(pessoa.getEmail())) {
             return null;
@@ -29,19 +29,19 @@ public class PessoaService {
     }
 
     public Pessoa buscarPorNome(String nome){
-        return pessoaRepository.findByName(nome);
+        return pessoaRepository.findByNome(nome);
     }
-
+    
     public Pessoa buscarPorEmail(String email){
         return pessoaRepository.findByEmail(email);
     }
 
-    // Validador email
+    // Validador de email
     public boolean emailValido(String email) {
         return email != null && email.contains("@") && email.contains(".");
     }
 
-    // NOVO PUT
+    // Atualizar Pessoa
     public Pessoa atualizarPessoa(Pessoa pessoa) {
         return pessoaRepository.save(pessoa);
     }
